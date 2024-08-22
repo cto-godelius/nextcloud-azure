@@ -244,7 +244,7 @@
 			"autoUpgradeMinorVersion": true,
 			"settings": {
 				"fileUris": "[split('https://raw.githubusercontent.com/theonemule/nextcloud-azure/main/install.sh', ' ')]",
-				"commandToExecute": "[concat('bash install.sh --hostname=', parameters('dnsNameForPublicIP'), '.', resourceGroup().location, '.cloudapp.azure.com --password=', parameters('adminPassword'), ' --username=', parameters('adminUsername'), ' --email=',  parameters('sslEmail'), ' --storageaccount=', variables('storageAccountName'), ' --container=', variables('containerName'))]"
+				"commandToExecute": "[concat('bash install.sh --hostname=', parameters('dnsNameForPublicIP'), '.', '.godelius.com --password=', parameters('adminPassword'), ' --username=', parameters('adminUsername'), ' --email=',  parameters('sslEmail'), ' --storageaccount=', variables('storageAccountName'), ' --container=', variables('containerName'))]"
 			}
 		}
 	},	
@@ -331,7 +331,7 @@
       "outputs": {
         "httpSite": {
             "type": "string",
-            "value": "[concat('Browse to: ', parameters('dnsNameForPublicIP'), '.', resourceGroup().location, '.cloudapp.azure.com and logon with u:admin p:', parameters('adminPassword'))]"
+            "value": "[concat('Browse to: ', parameters('dnsNameForPublicIP'), '.', '.godelius.com and logon with u:admin p:', parameters('adminPassword'))]"
         }
     }
 }
